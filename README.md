@@ -78,6 +78,7 @@ Este projeto busca mitigar esses problemas ao:
 
 ## Estrutura do repositório
 
+
 ```text
 monitor-deterioracao-ativos/
 ├── src/
@@ -93,6 +94,8 @@ monitor-deterioracao-ativos/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
+```
 
 ## Modelos treinados
 
@@ -122,7 +125,7 @@ Uso típico mensal:
 
     - HISTÓRICO → evolução mensal acumulada
 
-## Interpretação dos resultados ##
+## Interpretação dos resultados
 
 **- Label = 1**
 Regime confirmado de baixo desempenho
@@ -130,7 +133,7 @@ Regime confirmado de baixo desempenho
 **- Score (ML)**
 Escore probabilístico de fragilidade estatística
 
-**- Diagnóstico**
+**Diagnóstico**
     Síntese operacional:
 
     - Normal
