@@ -93,3 +93,66 @@ monitor-deterioracao-ativos/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
+## Modelos treinados
+
+Os arquivos de modelo treinado (.pkl) **não são versionados** neste repositório.
+
+Eles são gerados localmente a partir do notebook de treino (notebooks/exploracao_modelo.ipynb).
+Essa decisão evita versionamento de binários e mantém o repositório focado em código, lógica e documentação.
+
+## Uso do sistema (resumo)
+
+Uso típico mensal:
+
+**1.** Atualizar a lista de ativos no script
+
+**2.** Executar:
+
+    'python src/monitor_carteira.py'
+
+
+**3.** Analisar o Excel gerado:
+
+    - INÍCIO → explicação do sistema
+
+    - RESUMO → diagnóstico rápido
+
+    - DADOS → métricas completas
+
+    - HISTÓRICO → evolução mensal acumulada
+
+## Interpretação dos resultados ##
+
+**- Label = 1**
+Regime confirmado de baixo desempenho
+
+**- Score (ML)**
+Escore probabilístico de fragilidade estatística
+
+**- Diagnóstico**
+    Síntese operacional:
+
+    - Normal
+
+    - Atenção
+
+    - Regime fraco
+
+O score deve ser interpretado ao **longo do tempo**, não isoladamente.
+
+## Limitações
+
+O modelo utiliza apenas preços históricos
+
+Eventos estruturais recentes podem não ser capturados imediatamente
+
+O score é um **apoio à decisão**, não uma regra automática
+
+## Autor
+
+**Alan Alves**
+**galves.alan@gmail.com**
+
+
+Projeto pessoal para uso próprio, aprendizado contínuo e portfólio técnico.
