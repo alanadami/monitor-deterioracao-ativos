@@ -26,7 +26,7 @@ Este projeto busca mitigar esses problemas ao:
 
 - detectar **deterioração relativa e persistente**, não quedas pontuais  
 - comparar cada ativo **consigo mesmo**, evitando vieses entre ativos  
-- separar fraqueza **idiossincrática** de movimentos gerais do mercado  
+- identificar quando a deterioração é específica do ativo e não apenas reflexo do mercado  
 
 ---
 
