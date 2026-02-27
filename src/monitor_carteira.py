@@ -78,12 +78,15 @@ def calcular_features_e_label(precos_ativos, precos_ibov):
     sinal_fraco = (z < 0).astype(int)
     label = ((sinal_fraco == 1) & (sinal_fraco.shift(1) == 1)).astype(int)
 
+    z_lag1 = z.shift(1).iloc[-1]
     df = pd.DataFrame({
         "retorno": ret.iloc[-1],
         "ret_3m": (1 + ret).rolling(3).apply(lambda x: x.prod() - 1).iloc[-1],
         "ret_6m": (1 + ret).rolling(6).apply(lambda x: x.prod() - 1).iloc[-1],
         "vol_6m": ret.rolling(6).std().iloc[-1],
-        "zscore_lag1": z.shift(1).iloc[-1],
+        "zscore_atual": z.iloc[-1],
+        "zscore_mes_anterior": z_lag1,
+        "zscore_lag1": z_lag1,
         "zscore_rel_lag1": z_rel.shift(1).iloc[-1],
         "label": label.iloc[-1]
     })
